@@ -1,22 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu&display=swap');
 html{
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    font-size: 10px;
 }
+html {
+    height: -webkit-fill-available;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  /* Avoid Chrome to see Safari hack */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      /* The hack for Safari */
+      min-height: -webkit-fill-available;
+    }
+  }
+header img{
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+}
+
 header{
-    background-image: url(https://i.ytimg.com/vi/72MdaJBhAFk/maxresdefault.jpg);
-    /* text-align: center; */
     color: rgb(255, 255, 255);
-    /* padding: 10%; */
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: 100%;
+    background-color: rgba(111,20,17,255);
+    font-size: 12vh;
+    font-family: 'Noto Serif Telugu', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     text-decoration: none;
-    height: 800px;
 }
 header p{
-    font-size: 600%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    bottom: 25%;
-    position: relative;
+    font-size: 12rem;
+    font-family: 'Noto Serif Telugu', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
 }
 header a{
     text-decoration: none;
@@ -24,65 +51,30 @@ header a{
     background-color: #60bfe700;
     color: #d4e746b0;
     display: inline-block;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    font-size: 200%;  
+    font-family: Impact,'Arial Narrow Bold', sans-serif ;
+    font-size: 8rem;  
     margin-top: 20%;
-}
-.disco{
-    float: right;
-    text-align: right;
-    margin-left: -20%;
-    right: 20%;
-}
+    position: absolute;
+ }
+
+ .bio{
+    left: 0%;
+    margin-top: auto;
+ }
+ .disco{
+    right: 0%;
+    margin-top: auto;
+ }
+
 header p{
     text-align: center;
     /* padding-top: 150px; */
     clear: both;
 }
-.carousel-items{
-    display: flex;
-    overflow-x: scroll;
-    padding: 1rem 0;
-}
-.carousel-item{
-    margin-left: 1rem;
-}
-.carousel-item{
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 450px;
-    margin-left: 1rem;
-}
-img{
-    width: 500px;
-    height: 500px;
-}
-.carousel-item{
-    display: flex;
-    overflow-x: scroll;
-    padding: 1rem 0;
-    scroll-snap-type: mandatory;
-}
-.carousel-item{
-    flex: 1 0 250px;
-    margin-left: 1rem;
-    scroll-snap-align: start;
-}
-::-webkit-scrollbar-track{
-    background-color: #f5f5f5;
-}
-::-webkit-scrollbar{
-    height: 6px;
-    background-color: #f5f5f5;
-}
-::-webkit-scrollbar-thumb{
-    background-color: #3d4852;
-    border-radius: 3px;
-}
 body{
     margin: 0;
-    /* overflow: hidden; */
-    
+    background-color:#000000;
+
 }
 ::-webkit-scrollbar {
     display: none;
@@ -91,19 +83,208 @@ body{
     display: inline-block;
     position: absolute;
     bottom: 20%;
-    right: 30px;
+    right: 15%;
     z-index: 99;
     border: none;
     outline: none;
-    background-color: rgba(255, 0, 0, 0.37);
+    background-color: rgba(255, 0, 0, 0);
     color: yellow;
-    cursor: pointer;
+    cursor: grab;
     /* padding-bottom: 25px; */
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 4rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #bouton a{
     padding: 5px;
     margin: 0%;
+    font-size: 4rem;
+}
+
+@media screen and (max-width:768px){
+    header p{
+        display: block;
+        font-size: 5em;
+        color: aquamarine;
+    }
+    header {
+        position: relative;
+    }
+    .Liens{
+        position: absolute;
+        top: 0%;
+    }
+    header a{
+        position: static;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        margin-top: 0%;
+    }
+    header img{
+        position: relative;
+    }
+    #bouton{
+        display: none;
+    }
+    .disco{
+            text-align: none;
+            margin-left: none;
+            right: none;
+         }
+}
+
+
+
+
+#Overview{
+    height: 100vh;
+    
+
+}
+
+#story{
+    background-color: #000000;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+}
+#story p{
+    background-color: #611ddece;
+    width: 50%;
+    height: 25%;
+    margin-top: 10%;
+    margin-left: 40%;
+    font-size: 2.5rem;
+}
+#Overview img{
+    width: 25%;
+    position: absolute;
+    margin: 10% 5% 5% 5%;
+    border-radius: 50%;
+}
+
+
+
+/* carousel-------------------------------------------------------- */
+
+
+.textbox{
+    background-color: #000000a8;
+    color: white;
+    width: 50% ;
+    height: 25%;
+    border-radius: 40px;
+}
+
+.active, .textbox{
+    display: block;
+}
+.nonActive, .textbox{
+    display: none;
+}
+
+.container{
+    width: 1500px;
+    height: 1000px;  
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+}
+.slide{
+    min-width: 10px;
+    width: 50px;
+    height: 100%;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px 3px 5px black;
+    opacity: .5;
+}
+
+
+.active{
+    flex-grow: 1;
+    transition-duration: 1s;
+    opacity: 1;
+    padding: 0 10px;
+    border-radius: 25px;
+    padding-bottom: 10px
+}
+.nonActive{
+    flex-grow: 0;
+      opacity: .5;
+      transition-duration: 1s;
+
+}
+
+.slide:nth-of-type(1){
+    background-image: url('https://pen-online.com/fr/wp-content/uploads/2021/09/29180811/Fukui-Scenery_preview-sans_smaller.jpg');
+}
+.slide:nth-of-type(2){
+    background-image: url('https://pen-online.com/fr/wp-content/uploads/2021/09/29180805/Fukui-Mellow__frontcover_smaller.jpg');
+}
+.slide:nth-of-type(3){
+    background-image: url('https://pen-online.com/fr/wp-content/uploads/2021/09/29180807/fukui-MFT_cover-preview_without.jpeg');
+}
+.slide:nth-of-type(4){
+    background-image: url('https://pen-online.com/fr/wp-content/uploads/2021/09/29181333/a2532250646_10-1024x1015.jpg');
+}
+.slide:nth-of-type(5){
+    background-image: url('https://pen-online.com/fr/wp-content/uploads/2021/09/29181330/0020374015_10-1024x1008.jpg');
+}
+/* .slide:nth-of-type(6){
+    background-image: url('');
+} */
+.slide:nth-of-type(1) img{
+    width: 100%;
+}
+.slide:nth-of-type(2) img{
+    width: 100%;
+}
+.slide:nth-of-type(3) img{
+    width: 100%;
+}
+.slide:nth-of-type(4) img{
+    width: 100%;
+}
+.slide:nth-of-type(5) img{
+    width: 100%;
+}
+.slide:nth-of-type(6) img{
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .slide{
+        width: 20px;
+    }
+    .active{
+        border-radius: 25px
+    }
+}
+
+
+
+
+
+
+
+
+
+/* *********************************************** */
+
+footer p{
+    height: 30vh;
+    background-color: #aa252e;
+    color: white;
+    border-radius: 10px;
+    font-size: 2rem;
 }
