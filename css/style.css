@@ -1,0 +1,109 @@
+html{
+    scroll-behavior: smooth
+}
+header{
+    background-image: url(https://i.ytimg.com/vi/72MdaJBhAFk/maxresdefault.jpg);
+    /* text-align: center; */
+    color: rgb(255, 255, 255);
+    /* padding: 10%; */
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 100%;
+    text-decoration: none;
+    height: 800px;
+}
+header p{
+    font-size: 600%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    bottom: 25%;
+    position: relative;
+}
+header a{
+    text-decoration: none;
+    padding: 3%;
+    background-color: #60bfe700;
+    color: #d4e746b0;
+    display: inline-block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-size: 200%;  
+    margin-top: 20%;
+}
+.disco{
+    float: right;
+    text-align: right;
+    margin-left: -20%;
+    right: 20%;
+}
+header p{
+    text-align: center;
+    /* padding-top: 150px; */
+    clear: both;
+}
+.carousel-items{
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem 0;
+}
+.carousel-item{
+    margin-left: 1rem;
+}
+.carousel-item{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 450px;
+    margin-left: 1rem;
+}
+img{
+    width: 500px;
+    height: 500px;
+}
+.carousel-item{
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem 0;
+    scroll-snap-type: mandatory;
+}
+.carousel-item{
+    flex: 1 0 250px;
+    margin-left: 1rem;
+    scroll-snap-align: start;
+}
+::-webkit-scrollbar-track{
+    background-color: #f5f5f5;
+}
+::-webkit-scrollbar{
+    height: 6px;
+    background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #3d4852;
+    border-radius: 3px;
+}
+body{
+    margin: 0;
+    /* overflow: hidden; */
+    
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#bouton{
+    display: inline-block;
+    position: absolute;
+    bottom: 20%;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 0, 0, 0.37);
+    color: yellow;
+    cursor: pointer;
+    /* padding-bottom: 25px; */
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#bouton a{
+    padding: 5px;
+    margin: 0%;
+}
